@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLOBAL CARGO SYSTEM货运管理系统</title>
+    <!-- 引入Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- 引入Font Awesome图标库（用于替代部分图标） -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/style/indexstyle.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- 顶部标题栏 -->
+        <div class="row title-bar">
+            <div class="col-sm-3">
+                <span class="system-name">GLOBAL CARGO SYSTEM</span>
+                <span class="version-info">版本: 25.01b</span>
+            </div>
+            <div class="col-sm-3">
+                <span class="office-info">Office: SZ1 (SYS.ADMIN)</span>
+            </div>
+            <div class="col-sm-3">
+                <span class="user-info">USER: SYS.ADMIN</span>
+            </div>
+            <div class="col-sm-3 text-right">
+                <span class="logout"><a href="#">退出</a></span>
+            </div>
+        </div>
+
+        <!-- 主菜单 -->
+        <div class="row main-menu">
+            <div class="col-sm-12">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="http://192.168.1.201/home.html">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-plane"></i> 空运系统</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-ship"></i> 海运系统</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i> 销售系统</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-building"></i> 办公系统</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-money-bill-wave"></i> 财务系统</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://192.168.1.201/setting.html">
+                            <i class="fas fa-cog"></i> 系统设置</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-chart-bar"></i> 报表中心</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 左侧菜单 -->
+        <div class="row">
+            <div class="col-sm-2 left-menu">
+                <ul class="list-group">
+                    <li class="list-group-item active"><a href="http://192.168.1.201/home.html" style="color:black">首页</a></li>
+                    <li class="list-group-item"><a href="#"><i class="fas fa-ship"></i> 海运系统</a></li>
+                    <li class="list-group-item"><a href="#"><i class="fas fa-plane"></i> 空运系统</a></li>
+                    <li class="list-group-item"><a href="#"><i class="fas fa-shopping-cart"></i> 销售管理</a></li>
+                    <li class="list-group-item"><a href="#"><i class="fas fa-building"></i> 办公管理</a></li>
+                    <li class="list-group-item"><a href="#"><i class="fas fa-money-bill-wave"></i> 财务管理</a></li>
+                    <li class="list-group-item"><a href="#"><i class="fas fa-users"></i> 客户服务</a></li>
+                    <li class="list-group-item"><a href="http://192.168.1.201/setting.html"><i class="fas fa-database"></i> 基础资料</a></li>
+                    <li class="list-group-item"><a href="#"><i class="fas fa-chart-bar"></i> 报表中心</a></li>
+                </ul>
+            </div>
+
+ 
+
+        <!-- 主要内容区域 -->
+            <!-- 主要内容区域 -->
+        <div class="col-sm-10 main-content">
+            <div class="card">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-sm-6">
+                           <a href="http://192.168.1.201/setting-user.html"> <h5 class="card-title">员工档案</h5></a>
+                        </div>
+                        <div class="col-sm-6 text-right">
+                            <button type="button" class="btn btn-primary btn-sm">新增</button>
+                            <button type="button" class="btn btn-secondary btn-sm">删除</button>
+                            <button type="button" class="btn btn-secondary btn-sm">修改</button>
+                            <button type="button" class="btn btn-secondary btn-sm">保存</button>
+                            <button type="button" class="btn btn-secondary btn-sm">取消</button>
+                            <button type="button" class="btn btn-secondary btn-sm">更多查找</button>
+                            <button type="button" class="btn btn-secondary btn-sm">导入</button>
+                            <button type="button" class="btn btn-secondary btn-sm">清除</button>
+                            <button type="button" class="btn btn-secondary btn-sm">一键授权</button>
+                            <button type="button" class="btn btn-secondary btn-sm">强制修改密码</button>
+                            <button type="button" class="btn btn-secondary btn-sm">附件</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-sm-2">
+                                <label for="employee_id">员工编号</label>
+                                <input type="text" class="form-control" id="employee_id" placeholder="员工编号">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="name_cn">姓名(中文)</label>
+                                <input type="text" class="form-control" id="name_cn" placeholder="姓名(中文)">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="name_en">姓名(英文)</label>
+                                <input type="text" class="form-control" id="name_en" placeholder="姓名(英文)">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="username">用户名</label>
+                                <input type="text" class="form-control" id="username" placeholder="用户名">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="department">部门</label>
+                                <select id="department" class="form-control">
+                                    <option value="">--</option>
+                                    <option value="财务">财务</option>
+                                    <option value="销售">销售</option>
+                                    <option value="技术">技术</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="gender">性别</label>
+                                <select id="gender" class="form-control">
+                                    <option value="">--</option>
+                                    <option value="男">男</option>
+                                    <option value="女">女</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-sm-2">
+                                <label for="card_id">卡号</label>
+                                <input type="text" class="form-control" id="card_id" placeholder="卡号">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="join_date">入职日期</label>
+                                <input type="date" class="form-control" id="join_date">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="end_date">离职日期</label>
+                                <input type="date" class="form-control" id="end_date">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="position">职位</label>
+                                <input type="text" class="form-control" id="position" placeholder="职位">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="contract_end_date">合同到期日</label>
+                                <input type="date" class="form-control" id="contract_end_date">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="supervisor">上级领导</label>
+                                <input type="text" class="form-control" id="supervisor" placeholder="上级领导">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-sm-2">
+                                <label for="application_scope">应用于</label>
+                                <select id="application_scope" class="form-control">
+                                    <option value="">--</option>
+                                    <option value="单证">单证</option>
+                                    <option value="销售">销售</option>
+                                    <option value="财务">财务</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="identity">身份</label>
+                                <select id="identity" class="form-control">
+                                    <option value="">--</option>
+                                    <option value="全职">全职</option>
+                                    <option value="兼职">兼职</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="contact_person">联系人</label>
+                                <input type="text" class="form-control" id="contact_person" placeholder="联系人">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="email">电子邮件</label>
+                                <input type="email" class="form-control" id="email" placeholder="电子邮件">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="phone">电话</label>
+                                <input type="text" class="form-control" id="phone" placeholder="电话">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="mobile">手机</label>
+                                <input type="text" class="form-control" id="mobile" placeholder="手机">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-sm-2">
+                                <label for="address">家庭住址</label>
+                                <input type="text" class="form-control" id="address" placeholder="家庭住址">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="bank_card">银行卡号</label>
+                                <input type="text" class="form-control" id="bank_card" placeholder="银行卡号">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="bank_name">银行名称</label>
+                                <input type="text" class="form-control" id="bank_name" placeholder="银行名称">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="marital_status">婚姻状况</label>
+                                <select id="marital_status" class="form-control">
+                                    <option value="">--</option>
+                                    <option value="已婚">已婚</option>
+                                    <option value="未婚">未婚</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="birth_date">出生日期</label>
+                                <input type="date" class="form-control" id="birth_date">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="remark">备注</label>
+                                <input type="text" class="form-control" id="remark" placeholder="备注">
+                            </div>
+                        </div>
+                        <hr>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>序号</th>
+                                    <th>姓名(中文)</th>
+                                    <th>姓名(英文)</th>
+                                    <th>用户名</th>
+                                    <th>部门</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>陈桦</td>
+                                    <td>LETTO.CHEN.SZ</td>
+                                    <td>lettochen</td>
+                                    <td>IT</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-primary">查看</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">修改</button>
+                                        <button type="button" class="btn btn-sm btn-outline-danger">删除</button>
+                                    </td>
+                                </tr>
+                                <!-- 更多行数据可以在这里添加 -->
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+                 <!-- 主要内容区域 -->
+
+
+
+
+        </div>
+
+        <!-- 底部信息栏 -->
+        <div class="row footer">
+            <div class="col-sm-12 text-right">
+                <span>Copyright © 2024 GCS. All rights reserved. </span>
+                <!-- <span>GLOBAL CARGO SYSTEM</span> -->
+                <span style="color:blue;">If u have any question. then call us: letto-chen@gcsfe.com
+</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入jQuery和Bootstrap的JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/style/script.js"></script>
+</body>
+
+</html>

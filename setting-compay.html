@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLOBAL CARGO SYSTEM货运管理系统</title>
+    <!-- 引入Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- 引入Font Awesome图标库（用于替代部分图标） -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/style/indexstyle.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- 顶部标题栏 -->
+        <div class="row title-bar">
+            <div class="col-sm-3">
+                <span class="system-name">GLOBAL CARGO SYSTEM</span>
+                <span class="version-info">版本: 25.01b</span>
+            </div>
+            <div class="col-sm-3">
+                <span class="office-info">Office: SZ1 (SYS.ADMIN)</span>
+            </div>
+            <div class="col-sm-3">
+                <span class="user-info">USER: SYS.ADMIN</span>
+            </div>
+            <div class="col-sm-3 text-right">
+                <span class="logout"><a href="#">退出</a></span>
+            </div>
+        </div>
+
+        <!-- 主菜单 -->
+        <div class="row main-menu">
+            <div class="col-sm-12">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="http://192.168.1.201/home.html">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-plane"></i> 空运系统</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-ship"></i> 海运系统</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i> 销售系统</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-building"></i> 办公系统</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-money-bill-wave"></i> 财务系统</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://192.168.1.201/setting.html">
+                            <i class="fas fa-cog"></i> 系统设置</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-chart-bar"></i> 报表中心</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 左侧菜单 -->
+        <div class="row">
+            <div class="col-sm-2 left-menu">
+                <ul class="list-group">
+                    <li class="list-group-item active"><a href="http://192.168.1.201/home.html" style="color:black">首页</a></li>
+                    <li class="list-group-item"><a href="#"><i class="fas fa-ship"></i> 海运系统</a></li>
+                    <li class="list-group-item"><a href="#"><i class="fas fa-plane"></i> 空运系统</a></li>
+                    <li class="list-group-item"><a href="#"><i class="fas fa-shopping-cart"></i> 销售管理</a></li>
+                    <li class="list-group-item"><a href="#"><i class="fas fa-building"></i> 办公管理</a></li>
+                    <li class="list-group-item"><a href="#"><i class="fas fa-money-bill-wave"></i> 财务管理</a></li>
+                    <li class="list-group-item"><a href="#"><i class="fas fa-users"></i> 客户服务</a></li>
+                    <li class="list-group-item"><a href="http://192.168.1.201/setting.html"><i class="fas fa-database"></i> 基础资料</a></li>
+                    <li class="list-group-item"><a href="#"><i class="fas fa-chart-bar"></i> 报表中心</a></li>
+                </ul>
+            </div>
+
+ 
+
+        <!-- 主要内容区域 -->
+            <!-- 主要内容区域 -->
+        <div class="col-sm-10 main-content">
+            <div class="card">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <a  href="http://192.168.1.201/setting-compay.html"><h5 class="card-title">公司档案列表</h5></a>
+                        </div>
+                        <div class="col-sm-6 text-right">
+                            <a  href="http://192.168.1.201/setting-compay-add.html"><button type="button" class="btn btn-primary btn-sm">新增</button></a>
+                            <button type="button" class="btn btn-secondary btn-sm">作废</button>
+                            <button type="button" class="btn btn-secondary btn-sm">删除</button>
+                            <button type="button" class="btn btn-secondary btn-sm">修改</button>
+                            <button type="button" class="btn btn-secondary btn-sm">导入</button>
+                            <button type="button" class="btn btn-secondary btn-sm">附件</button>
+                            <button type="button" class="btn btn-secondary btn-sm">从CDB读取</button>
+                            <button type="button" class="btn btn-secondary btn-sm">取消审核</button>
+                            <button type="button" class="btn btn-secondary btn-sm">拉取客户</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-sm-2">
+                                <label for="code">代码</label>
+                                <input type="text" class="form-control" id="code" placeholder="代码">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="name">名称、简称</label>
+                                <input type="text" class="form-control" id="name" placeholder="名称、简称">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="address">地址</label>
+                                <input type="text" class="form-control" id="address" placeholder="地址">
+                            </div>
+                            <div class="form-group col="2">
+                                <label for="company_type">公司类别</label>
+                                <select id="company_type" class="form-control">
+                                    <option value="">--</option>
+                                    <option value="国内客户">国内客户</option>
+                                    <option value="国外客户">国外客户</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="shipping_company">航运公司</label>
+                                <select id="shipping_company" class="form-control">
+                                    <option value="">--</option>
+                                    <option value="ABC Shipping">ABC Shipping</option>
+                                    <option value="XYZ Logistics">XYZ Logistics</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="flight_route">航线</label>
+                                <input type="text" class="form-control" id="flight_route" placeholder="航线">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-sm-2">
+                                <label for="date">日期</label>
+                                <input type="date" class="form-control" id="date">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="creation_date">创建日期</label>
+                                <input type="date" class="form-control" id="creation_date">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="billing_method">结算方式</label>
+                                <select id="billing_method" class="form-control">
+                                    <option value="">--</option>
+                                    <option value="月结">月结</option>
+                                    <option value="现结">现结</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="ticket">票据</label>
+                                <input type="text" class="form-control" id="ticket" placeholder="票据">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="company_attribute">公司属性</label>
+                                <select id="company_attribute" class="form-control">
+                                    <option value="">--</option>
+                                    <!-- <option value="制造商">制造商</option> -->
+                                    <option value="">   船公司 </option>
+                                    <option value="">   发货人 </option>
+                                    <option value="">   收货人 </option>
+                                    <option value="">   海外代理    </option>
+                                    <option value="">   订舱代理    </option>
+                                    <option value="">   客户  </option>
+                                    <option value="">   航空公司    </option>
+
+                                </select>
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="contract_number">合同号</label>
+                                <input type="text" class="form-control" id="contract_number" placeholder="合同号">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-sm-2">
+                                <label for="my_company">我司名称</label>
+                                <input type="text" class="form-control" id="my_company" placeholder="我司名称">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="group_code">集团代码</label>
+                                <input type="text" class="form-control" id="group_code" placeholder="集团代码">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="sales_department">销售部门</label>
+                                <input type="text" class="form-control" id="sales_department" placeholder="销售部门">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="unshipped_days">未出货天数</label>
+                                <input type="number" class="form-control" id="unshipped_days" placeholder="未出货天数">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="audited">已审核</label>
+                                <select id="audited" class="form-control">
+                                    <option value="">--</option>
+                                    <option value="是">是</option>
+                                    <option value="否">否</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="attachments">有附件</label>
+                                <select id="attachments" class="form-control">
+                                    <option value="">--</option>
+                                    <option value="是">是</option>
+                                    <option value="否">否</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-sm-2">
+                                <label for="signed">已签</label>
+                                <select id="signed" class="form-control">
+                                    <option value="">--</option>
+                                    <option value="是">是</option>
+                                    <option value="否">否</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="expired">已过期</label>
+                                <select id="expired" class="form-control">
+                                    <option value="">--</option>
+                                    <option value="是">是</option>
+                                    <option value="否">否</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="arriving_soon">即将到期</label>
+                                <select id="arriving_soon" class="form-control">
+                                    <option value="">--</option>
+                                    <option value="是">是</option>
+                                    <option value="否">否</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="locked">已锁定</label>
+                                <select id="locked" class="form-control">
+                                    <option value="">--</option>
+                                    <option value="是">是</option>
+                                    <option value="否">否</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="effective">有效</label>
+                                <select id="effective" class="form-control">
+                                    <option value="">--</option>
+                                    <option value="是">是</option>
+                                    <option value="否">否</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="source">来源</label>
+                                <select id="source" class="form-control">
+                                    <option value="">--</option>
+                                    <option value="国内">国内</option>
+                                    <option value="国外">国外</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-sm-2">
+                                <label for="client_code">客户编码</label>
+                                <input type="text" class="form-control" id="client_code" placeholder="客户编码">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="abbreviation">简称</label>
+                                <input type="text" class="form-control" id="abbreviation" placeholder="简称">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="chinese_name">中文名称</label>
+                                <input type="text" class="form-control" id="chinese_name" placeholder="中文名称">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="english_name">英文名称</label>
+                                <input type="text" class="form-control" id="english_name" placeholder="英文名称">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="chinese_address">中文地址</label>
+                                <input type="text" class="form-control" id="chinese_address" placeholder="中文地址">
+                            </div>
+                        </div>
+                        <hr>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>序号</th>
+                                    <th>来源</th>
+                                    <th>有效</th>
+                                    <th>审核</th>
+                                    <th>附件锁定</th>
+                                    <th>客户</th>
+                                    <th>客户编码</th>
+                                    <th>简称</th>
+                                    <th>中文名称</th>
+                                    <th>英文名称</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>LOCAL</td>
+                                    <td><i class="fas fa-check"></i></td>
+                                    <td><i class="fas fa-check"></i></td>
+                                    <td><i class="fas fa-lock"></i></td>
+                                    <td>客户A</td>
+                                    <td>001</td>
+                                    <td>简称A</td>
+                                    <td>中文名称A</td>
+                                    <td>English Name A</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-primary">查看</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">修改</button>
+                                        <button type="button" class="btn btn-sm btn-outline-danger">删除</button>
+                                    </td>
+                                </tr>
+                                <!-- 更多行数据可以在这里添加 -->
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+                 <!-- 主要内容区域 -->
+
+
+
+
+        </div>
+
+        <!-- 底部信息栏 -->
+        <div class="row footer">
+            <div class="col-sm-12 text-right">
+                <span>Copyright © 2024 GCS. All rights reserved. </span>
+                <!-- <span>GLOBAL CARGO SYSTEM</span> -->
+                <span style="color:blue;">If u have any question. then call us: letto-chen@gcsfe.com
+</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入jQuery和Bootstrap的JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/style/script.js"></script>
+</body>
+
+</html>

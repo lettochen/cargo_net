@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLOBAL CARGO SYSTEM货运管理系统</title>
+    <!-- 引入Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- 引入Font Awesome图标库（用于替代部分图标） -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/style/indexstyle.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- 顶部标题栏 -->
+        <div class="row title-bar">
+            <div class="col-sm-3">
+                <span class="system-name">GLOBAL CARGO SYSTEM</span>
+                <span class="version-info">版本: 25.01b</span>
+            </div>
+            <div class="col-sm-3">
+                <span class="office-info">Office: SZ1 (SYS.ADMIN)</span>
+            </div>
+            <div class="col-sm-3">
+                <span class="user-info">USER: SYS.ADMIN</span>
+            </div>
+            <div class="col-sm-3 text-right">
+                <span class="logout"><a href="#">退出</a></span>
+            </div>
+        </div>
+
+        <!-- 主菜单 -->
+        <div class="row main-menu">
+            <div class="col-sm-12">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="http://192.168.1.201/home.html">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-plane"></i> 空运系统</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-ship"></i> 海运系统</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i> 销售系统</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-building"></i> 办公系统</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-money-bill-wave"></i> 财务系统</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://192.168.1.201/setting.html">
+                            <i class="fas fa-cog"></i> 系统设置</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-chart-bar"></i> 报表中心</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 左侧菜单 -->
+        <div class="row">
+            <div class="col-sm-2 left-menu">
+                <ul class="list-group">
+                    <li class="list-group-item active"><a href="http://192.168.1.201/home.html" style="color:black">首页</a></li>
+                    <li class="list-group-item"><a href="#"><i class="fas fa-ship"></i> 海运系统</a></li>
+                    <li class="list-group-item"><a href="#"><i class="fas fa-plane"></i> 空运系统</a></li>
+                    <li class="list-group-item"><a href="#"><i class="fas fa-shopping-cart"></i> 销售管理</a></li>
+                    <li class="list-group-item"><a href="#"><i class="fas fa-building"></i> 办公管理</a></li>
+                    <li class="list-group-item"><a href="#"><i class="fas fa-money-bill-wave"></i> 财务管理</a></li>
+                    <li class="list-group-item"><a href="#"><i class="fas fa-users"></i> 客户服务</a></li>
+                    <li class="list-group-item"><a href="http://192.168.1.201/setting.html"><i class="fas fa-database"></i> 基础资料</a></li>
+                    <li class="list-group-item"><a href="#"><i class="fas fa-chart-bar"></i> 报表中心</a></li>
+                </ul>
+            </div>
+        <!-- 主要内容区域 -->
+            <div class="col-sm-10 main-content">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <img src="/assets/images/setting.png" alt="部门" class="img-fluid menu-icon">
+                        <p>部门</p>
+                    </div>
+                    <div class="col-sm-3">
+                        <a href="http://192.168.1.201/setting-user.html">  <img src="/assets/images/setting.png" alt="员工档案" class="img-fluid menu-icon">
+                        <p>员工档案</p> </a>
+
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="/assets/images/setting.png" alt="组织关系图" class="img-fluid menu-icon">
+                        <p>组织关系图</p>
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="/assets/images/setting.png" alt="权限设置" class="img-fluid menu-icon">
+                        <p>权限设置</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <a href="http://192.168.1.201/setting-compay.html" style="color:black"><img src="/assets/images/setting.png" alt="公司档案" class="img-fluid menu-icon">
+                        <p>公司档案</p></a>
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="/assets/images/setting.png" alt="费用项管理" class="img-fluid menu-icon">
+                        <p>费用项管理</p>
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="/assets/images/setting.png" alt="空运港口" class="img-fluid menu-icon">
+                        <p>空运港口</p>
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="/assets/images/setting.png" alt="海运港口" class="img-fluid menu-icon">
+                        <p>海运港口</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <img src="/assets/images/setting.png" alt="空运杂费" class="img-fluid menu-icon">
+                        <p>空运杂费</p>
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="/assets/images/setting.png" alt="船名航次" class="img-fluid menu-icon">
+                        <p>船名航次</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <img src="/assets/images/setting.png" alt="系统参数" class="img-fluid menu-icon">
+                        <p>系统参数</p>
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="/assets/images/setting.png" alt="基础资料中心" class="img-fluid menu-icon">
+                        <p>基础资料中心</p>
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="/assets/images/setting.png" alt="资料整理" class="img-fluid menu-icon">
+                        <p>资料整理</p>
+                    </div>
+                </div>
+            </div>
+    
+                 <!-- 主要内容区域 -->
+
+
+
+
+        </div>
+
+        <!-- 底部信息栏 -->
+        <div class="row footer">
+            <div class="col-sm-12 text-right">
+                <span>Copyright © 2024 GCS. All rights reserved. </span>
+                <!-- <span>GLOBAL CARGO SYSTEM</span> -->
+                <span style="color:blue;">If u have any question. then call us: letto-chen@gcsfe.com
+</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入jQuery和Bootstrap的JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/style/script.js"></script>
+</body>
+
+</html>

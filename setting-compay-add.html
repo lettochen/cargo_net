@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLOBAL CARGO SYSTEM货运管理系统</title>
+    <!-- 引入Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- 引入Font Awesome图标库（用于替代部分图标） -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/style/indexstyle.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- 顶部标题栏 -->
+        <div class="row title-bar">
+            <div class="col-sm-3">
+                <span class="system-name">GLOBAL CARGO SYSTEM</span>
+                <span class="version-info">版本: 25.01b</span>
+            </div>
+            <div class="col-sm-3">
+                <span class="office-info">Office: SZ1 (SYS.ADMIN)</span>
+            </div>
+            <div class="col-sm-3">
+                <span class="user-info">USER: SYS.ADMIN</span>
+            </div>
+            <div class="col-sm-3 text-right">
+                <span class="logout"><a href="#">退出</a></span>
+            </div>
+        </div>
+
+        <!-- 主菜单 -->
+        <div class="row main-menu">
+            <div class="col-sm-12">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="http://192.168.1.201/home.html">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-plane"></i> 空运系统</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-ship"></i> 海运系统</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i> 销售系统</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-building"></i> 办公系统</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-money-bill-wave"></i> 财务系统</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://192.168.1.201/setting.html">
+                            <i class="fas fa-cog"></i> 系统设置</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-chart-bar"></i> 报表中心</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 左侧菜单 -->
+        <div class="row">
+            <div class="col-sm-2 left-menu">
+                <ul class="list-group">
+                    <li class="list-group-item active"><a href="http://192.168.1.201/home.html" style="color:black">首页</a></li>
+                    <li class="list-group-item"><a href="#"><i class="fas fa-ship"></i> 海运系统</a></li>
+                    <li class="list-group-item"><a href="#"><i class="fas fa-plane"></i> 空运系统</a></li>
+                    <li class="list-group-item"><a href="#"><i class="fas fa-shopping-cart"></i> 销售管理</a></li>
+                    <li class="list-group-item"><a href="#"><i class="fas fa-building"></i> 办公管理</a></li>
+                    <li class="list-group-item"><a href="#"><i class="fas fa-money-bill-wave"></i> 财务管理</a></li>
+                    <li class="list-group-item"><a href="#"><i class="fas fa-users"></i> 客户服务</a></li>
+                    <li class="list-group-item"><a href="http://192.168.1.201/setting.html"><i class="fas fa-database"></i> 基础资料</a></li>
+                    <li class="list-group-item"><a href="#"><i class="fas fa-chart-bar"></i> 报表中心</a></li>
+                </ul>
+            </div>
+
+ 
+ 
+        <!-- 主要内容区域 -->
+          <div class="col-sm-10 main-content">
+            <div class="card">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-sm-6">
+                             <a  href="http://192.168.1.201/setting-compay.html"><h5 class="card-title">返回公司资料</h5></a>
+                        </div>
+                        <div class="col-sm-6 text-right">
+                            <button type="button" class="btn btn-primary btn-sm">新增</button>
+                            <button type="button" class="btn btn-secondary btn-sm">作废</button>
+                            <button type="button" class="btn btn-secondary btn-sm">修改</button>
+                            <button type="button" class="btn btn-secondary btn-sm">保存</button>
+                            <button type="button" class="btn btn-secondary btn-sm">引入</button>
+                            <button type="button" class="btn btn-secondary btn-sm">取消审核</button>
+                            <button type="button" class="btn btn-secondary btn-sm">附件</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-sm-2">
+                                <label for="code">编号</label>
+                                <input type="text" class="form-control" id="code" placeholder="编号">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="name">英文名称</label>
+                                <input type="text" class="form-control" id="name" placeholder="英文名称">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="chinese_name">中文名称</label>
+                                <input type="text" class="form-control" id="chinese_name" placeholder="中文名称">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="city">城市</label>
+                                <input type="text" class="form-control" id="city" placeholder="城市">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-sm-2">
+                                <label for="province">省份</label>
+                                <input type="text" class="form-control" id="province" placeholder="省份">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="country">国家</label>
+                                <input type="text" class="form-control" id="country" placeholder="国家">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="category">公司类别</label>
+                                <select id="category" class="form-control">
+                                    <option value="">--</option>
+                                    <option value="发货人">发货人</option>
+                                    <option value="收货人">收货人</option>
+                                    <option value="货代">货代</option>
+                                    <option value="其他">其他</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="contact_person">联系人</label>
+                                <input type="text" class="form-control" id="contact_person" placeholder="联系人">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-sm-2">
+                                <label for="phone">手机</label>
+                                <input type="text" class="form-control" id="phone" placeholder="手机">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="office_phone">办公室电话</label>
+                                <input type="text" class="form-control" id="office_phone" placeholder="办公室电话">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="fax">传真</label>
+                                <input type="text" class="form-control" id="fax" placeholder="传真">
+                            </div>
+                            <div class="form-group col-sm-2">
+                                <label for="email">电子邮件</label>
+                                <input type="email" class="form-control" id="email" placeholder="电子邮件">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                <label for="website">网址</label>
+                                <input type="text" class="form-control" id="website" placeholder="网址">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="registration_number">工商注册号</label>
+                                <input type="text" class="form-control" id="registration_number" placeholder="工商注册号">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="tax_number">纳税人识别号</label>
+                                <input type="text" class="form-control" id="tax_number" placeholder="纳税人识别号">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                <label for="office">Office</label>
+                                <input type="text" class="form-control" id="office" placeholder="Office">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="need_office">Need Office</label>
+                                <input type="text" class="form-control" id="need_office" placeholder="Need Office">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="big_data_subscription">大数据订阅</label>
+                                <select id="big_data_subscription" class="form-control">
+                                    <option value="">--</option>
+                                    <option value="不订阅">不订阅</option>
+                                    <option value="仅订阅">仅订阅</option>
+                                    <option value="订阅并且更新原因">订阅并且更新原因</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-sm-2">
+                                <label for="monthly_sales">月销售额</label>
+                                <input type="text" class="form-control" id="monthly_sales" placeholder="月销售额">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="customer_contact">客户联系人</label>
+                                <input type="text" class="form-control" id="customer_contact" placeholder="客户联系人">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="related_personnel">我司相关人员</label>
+                                <input type="text" class="form-control" id="related_personnel" placeholder="我司相关人员">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                <label for="tax_info">税务信息</label>
+                                <input type="text" class="form-control" id="tax_info" placeholder="税务信息">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="contract_info">合同及会员记录</label>
+                                <input type="text" class="form-control" id="contract_info" placeholder="合同及会员记录">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="other_info">其他</label>
+                                <input type="text" class="form-control" id="other_info" placeholder="其他">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                <label for="registration_phone">注册地址及电话</label>
+                                <input type="text" class="form-control" id="registration_phone" placeholder="注册地址及电话">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="bank_account">开户银行及帐号</label>
+                                <input type="text" class="form-control" id="bank_account" placeholder="开户银行及帐号">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="remark">备注</label>
+                                <input type="text" class="form-control" id="remark" placeholder="备注">
+                            </div>
+                        </div>
+                        <hr>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>序号</th>
+                                    <th>币种</th>
+                                    <th>开户名</th>
+                                    <th>银行名称</th>
+                                    <th>银行账号</th>
+                                    <th>备注</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>人民币</td>
+                                    <td>公司A</td>
+                                    <td>工商银行</td>
+                                    <td>1234567890</td>
+                                    <td>主账户</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-primary">查看</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">修改</button>
+                                        <button type="button" class="btn btn-sm btn-outline-danger">删除</button>
+                                    </td>
+                                </tr>
+                                <!-- 更多行数据可以在这里添加 -->
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+                 <!-- 主要内容区域 -->
+
+
+
+
+        </div>
+
+        <!-- 底部信息栏 -->
+        <div class="row footer">
+            <div class="col-sm-12 text-right">
+                <span>Copyright © 2024 GCS. All rights reserved. </span>
+                <!-- <span>GLOBAL CARGO SYSTEM</span> -->
+                <span style="color:blue;">If u have any question. then call us: letto-chen@gcsfe.com
+</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入jQuery和Bootstrap的JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/style/script.js"></script>
+</body>
+
+</html>
